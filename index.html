@@ -1,107 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pharmacy Knowledge 247</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
+font-family: Arial;
 background:#0f172a;
 color:white;
+padding:20px;
 }
 
 header{
 background:#16a34a;
-padding:30px;
-text-align:center;
-}
-
-header h1{
-font-size:38px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
-
-nav{
-background:#1e293b;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-padding:12px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:8px 12px;
-font-weight:bold;
-}
-
-.hero{
-text-align:center;
-padding:40px 20px;
-}
-
-.hero h2{
-font-size:30px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-background:#16a34a;
-color:white;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-padding:30px;
-}
-
-.card{
-background:#1e293b;
 padding:20px;
 border-radius:10px;
 text-align:center;
 }
 
-.card a{
-color:white;
+a{
+color:#38bdf8;
 text-decoration:none;
-font-weight:bold;
 }
 
-footer{
+.box{
 background:#1e293b;
-text-align:center;
-padding:20px;
-margin-top:30px;
+padding:15px;
+margin-top:20px;
+border-radius:10px;
 }
-</style>
 
+input{
+padding:10px;
+width:70%;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px;
+background:#16a34a;
+color:white;
+border:none;
+border-radius:8px;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
@@ -109,53 +55,78 @@ margin-top:30px;
 <p>Learn Medicines in Easy Hindi</p>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="medicines.html">Medicines</a>
-<a href="diseases.html">Diseases</a>
-<a href="pharmacology.html">Pharmacology</a>
-<a href="drugcategories.html">Drug Categories</a>
-<a href="about.html">About</a>
-</nav>
 
-<section class="hero">
-<h2>Welcome</h2>
-<p>Learn Medicines, Diseases, Pharmacology and Drug Categories in simple Hindi.</p>
+<div class="box">
 
-<a class="btn" href="medicines.html">Explore Medicines</a>
-</section>
+<h2>Search Pharmacy Topics</h2>
 
-<section class="cards">
+<input type="text" id="searchBox" placeholder="Search medicine or disease">
 
-<div class="card">
-<a href="medicines.html">💊 Medicines</a>
+<button onclick="searchPage()">Search</button>
+
 </div>
 
-<div class="card">
-<a href="diseases.html">🦠 Diseases</a>
+
+<div class="box">
+
+<h2>Explore</h2>
+
+<p><a href="medicines.html">Medicines</a></p>
+
+<p><a href="diseases.html">Diseases</a></p>
+
+<p><a href="pharmacology.html">Pharmacology</a></p>
+
 </div>
 
-<div class="card">
-<a href="pharmacology.html">📚 Pharmacology</a>
+
+<div class="box">
+
+<h2>About</h2>
+
+<p>
+Welcome to Pharmacy Knowledge 247.
+Here you will learn about medicines, diseases, pharmacology and pharmacy in simple Hindi language.
+</p>
+
 </div>
 
-<div class="card">
-<a href="drugcategories.html">💉 Drug Categories</a>
-</div>
 
-<div class="card">
-<a href="about.html">ℹ️ About</a>
-</div>
+<script>
 
-<div class="card">
-<a href="https://youtube.com/">▶ YouTube</a>
-</div>
+function searchPage(){
 
-</section>
+let query = document.getElementById("searchBox").value.toLowerCase();
 
-<footer>
-© 2026 Pharmacy Knowledge 247 | All Rights Reserved
-</footer>
+
+if(query.includes("paracetamol")){
+window.location.href="paracetamol.html";
+}
+
+else if(query.includes("ibuprofen")){
+window.location.href="ibuprofen.html";
+}
+
+else if(query.includes("amoxicillin")){
+window.location.href="amoxicillin.html";
+}
+
+else if(query.includes("diabetes") || query.includes("hypertension")){
+window.location.href="diseases.html";
+}
+
+else if(query.includes("antibiotic")){
+window.location.href="pharmacology.html";
+}
+
+else{
+alert("Topic nahi mila. Jaldi hi add kiya jayega.");
+}
+
+}
+
+</script>
+
 
 </body>
 </html>
