@@ -1,68 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharmacy Knowledge 247</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmacy Knowledge 247</title>
 
-    <style>
-        body{
-            margin:0;
-            font-family:Arial, sans-serif;
-            background:#0f172a;
-            color:white;
-            text-align:center;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        header{
-            background:#16a34a;
-            padding:20px;
-        }
+body{
+background:#0f172a;
+color:white;
+}
 
-        h1{
-            margin:0;
-            font-size:40px;
-        }
+header{
+background:#16a34a;
+padding:30px;
+text-align:center;
+}
 
-        p{
-            font-size:18px;
-        }
+header h1{
+font-size:38px;
+}
 
-        .btn{
-            display:inline-block;
-            margin-top:20px;
-            padding:12px 25px;
-            background:white;
-            color:#16a34a;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-        }
+header p{
+margin-top:10px;
+font-size:18px;
+}
 
-        section{
-            padding:50px 20px;
-        }
-    </style>
+nav{
+background:#1e293b;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+padding:12px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:8px 12px;
+font-weight:bold;
+}
+
+.hero{
+text-align:center;
+padding:40px 20px;
+}
+
+.hero h2{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#16a34a;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.card a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+background:#1e293b;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+</style>
+
 </head>
-
 <body>
 
 <header>
-    <h1>Pharmacy Knowledge 247</h1>
-    <p>Learn Medicines in Easy Hindi</p>
+<h1>Pharmacy Knowledge 247</h1>
+<p>Learn Medicines in Easy Hindi</p>
 </header>
 
-<section>
-    <h2>Welcome</h2>
-    <p>
-        Welcome to Pharmacy Knowledge 247.
-        Here you will learn about medicines,
-        diseases, pharmacology and pharmacy
-        in simple language.
-    </p>
+<nav>
+<a href="index.html">Home</a>
+<a href="medicines.html">Medicines</a>
+<a href="diseases.html">Diseases</a>
+<a href="pharmacology.html">Pharmacology</a>
+<a href="drugcategories.html">Drug Categories</a>
+<a href="about.html">About</a>
+</nav>
 
-    <a class="btn" href="medicines.html">Explore</a>
+<section class="hero">
+<h2>Welcome</h2>
+<p>Learn Medicines, Diseases, Pharmacology and Drug Categories in simple Hindi.</p>
+
+<a class="btn" href="medicines.html">Explore Medicines</a>
 </section>
+
+<section class="cards">
+
+<div class="card">
+<a href="medicines.html">💊 Medicines</a>
+</div>
+
+<div class="card">
+<a href="diseases.html">🦠 Diseases</a>
+</div>
+
+<div class="card">
+<a href="pharmacology.html">📚 Pharmacology</a>
+</div>
+
+<div class="card">
+<a href="drugcategories.html">💉 Drug Categories</a>
+</div>
+
+<div class="card">
+<a href="about.html">ℹ️ About</a>
+</div>
+
+<div class="card">
+<a href="https://youtube.com/">▶ YouTube</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Pharmacy Knowledge 247 | All Rights Reserved
+</footer>
 
 </body>
 </html>
