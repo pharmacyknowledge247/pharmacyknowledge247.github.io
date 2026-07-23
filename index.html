@@ -6,7 +6,7 @@
 
 <style>
 body{
-font-family: Arial;
+font-family:Arial;
 background:#0f172a;
 color:white;
 padding:20px;
@@ -19,16 +19,16 @@ border-radius:10px;
 text-align:center;
 }
 
-a{
-color:#38bdf8;
-text-decoration:none;
-}
-
 .box{
 background:#1e293b;
 padding:15px;
 margin-top:20px;
 border-radius:10px;
+}
+
+a{
+color:#38bdf8;
+text-decoration:none;
 }
 
 input{
@@ -62,7 +62,7 @@ border-radius:8px;
 
 <h2>Search Pharmacy Topics</h2>
 
-<input type="text" id="searchBox" placeholder="Search medicine or disease">
+<input id="searchBox" type="text" placeholder="Search medicine or disease">
 
 <button onclick="searchPage()">Search</button>
 
@@ -84,7 +84,7 @@ border-radius:8px;
 
 <div class="box">
 
-<h2>About</h2>
+<h2>About Pharmacy Knowledge 247</h2>
 
 <p>
 Welcome to Pharmacy Knowledge 247.
@@ -98,27 +98,27 @@ Here you will learn about medicines, diseases, pharmacology and pharmacy in simp
 
 function searchPage(){
 
-let query = document.getElementById("searchBox").value.toLowerCase();
+let query = document.getElementById("searchBox").value.toLowerCase().trim();
 
 
 if(query.includes("paracetamol")){
-window.location.href="Paracetamol.html";
+window.location.href="paracetamol.html";
 }
 
 else if(query.includes("ibuprofen")){
-window.location.href="Ibuprofen.html";
+window.location.href="ibuprofen.html";
 }
 
 else if(query.includes("amoxicillin")){
-window.location.href="Amoxicillin.html";
+window.location.href="amoxicillin.html";
 }
 
 else if(query.includes("diabetes") || query.includes("hypertension")){
-window.location.href="Diseases.html";
+window.location.href="diseases.html";
 }
 
 else if(query.includes("antibiotic")){
-window.location.href="Pharmacology.html";
+window.location.href="pharmacology.html";
 }
 
 else{
