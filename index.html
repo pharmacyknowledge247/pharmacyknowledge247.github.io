@@ -1,134 +1,56 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pharmacy Knowledge 247</title>
-
+<meta name="description" content="Learn medicines, diseases and pharmacology in easy Hindi.">
 <style>
-body{
-font-family:Arial;
-background:#0f172a;
-color:white;
-padding:20px;
-}
-
-header{
-background:#16a34a;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-.box{
-background:#1e293b;
-padding:15px;
-margin-top:20px;
-border-radius:10px;
-}
-
-a{
-color:#38bdf8;
-text-decoration:none;
-}
-
-input{
-padding:10px;
-width:70%;
-border-radius:8px;
-border:none;
-}
-
-button{
-padding:10px;
-background:#16a34a;
-color:white;
-border:none;
-border-radius:8px;
-}
-
+body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#fff}
+header{background:#16a34a;padding:20px;text-align:center}
+nav{background:#14532d;padding:10px;text-align:center}
+nav a{color:#fff;text-decoration:none;margin:0 12px}
+.container{max-width:900px;margin:auto;padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:12px;margin:20px 0}
+input{width:70%;max-width:500px;padding:10px;border-radius:8px;border:0}
+button{padding:10px 16px;border:0;border-radius:8px;background:#16a34a;color:#fff;cursor:pointer}
+footer{text-align:center;padding:20px;background:#111827;color:#cbd5e1}
 </style>
-
 </head>
-
 <body>
-
-<header>
-<h1>Pharmacy Knowledge 247</h1>
-<p>Learn Medicines in Easy Hindi</p>
-</header>
-
-
-<div class="box">
-
-<h2>Search Pharmacy Topics</h2>
-
-<input id="searchBox" type="text" placeholder="Search medicine or disease">
-
-<button onclick="searchPage()">Search</button>
-
+<header><h1>Pharmacy Knowledge 247</h1><p>Learn Medicines in Easy Hindi</p></header>
+<nav>
+<a href="index.html">Home</a>
+<a href="medicines.html">Medicines</a>
+<a href="diseases.html">Diseases</a>
+<a href="pharmacology.html">Pharmacology</a>
+</nav>
+<div class="container">
+<div class="card">
+<h2>Search</h2>
+<input id="q" placeholder="Search medicine or disease">
+<button onclick="go()">Search</button>
 </div>
-
-
-<div class="box">
-
-<h2>Explore</h2>
-
-<p><a href="medicines.html">Medicines</a></p>
-
-<p><a href="diseases.html">Diseases</a></p>
-
-<p><a href="pharmacology.html">Pharmacology</a></p>
-
+<div class="card">
+<h2>Welcome</h2>
+<p>Explore medicines, diseases and pharmacology notes in simple Hindi.</p>
 </div>
-
-
-<div class="box">
-
-<h2>About Pharmacy Knowledge 247</h2>
-
-<p>
-Welcome to Pharmacy Knowledge 247.
-Here you will learn about medicines, diseases, pharmacology and pharmacy in simple Hindi language.
-</p>
-
 </div>
-
-
+<footer>© 2026 Pharmacy Knowledge 247</footer>
 <script>
-
-function searchPage(){
-
-let query = document.getElementById("searchBox").value.toLowerCase().trim();
-
-
-if(query.includes("paracetamol")){
-window.location.href="paracetamol.html";
+function go(){
+let q=document.getElementById('q').value.trim().toLowerCase();
+const map={
+'paracetamol':'paracetamol.html',
+'ibuprofen':'ibuprofen.html',
+'amoxicillin':'amoxicillin.html',
+'diabetes':'diseases.html',
+'hypertension':'diseases.html',
+'pharmacology':'pharmacology.html',
+'medicine':'medicines.html'
+};
+if(map[q]) location.href=map[q];
+else alert('Topic nahi mila. Spelling check karein.');
 }
-
-else if(query.includes("ibuprofen")){
-window.location.href="ibuprofen.html";
-}
-
-else if(query.includes("amoxicillin")){
-window.location.href="amoxicillin.html";
-}
-
-else if(query.includes("diabetes") || query.includes("hypertension")){
-window.location.href="diseases.html";
-}
-
-else if(query.includes("antibiotic")){
-window.location.href="pharmacology.html";
-}
-
-else{
-alert("Topic nahi mila. Jaldi hi add kiya jayega.");
-}
-
-}
-
 </script>
-
-
-</body>
-</html>
+</body></html>
