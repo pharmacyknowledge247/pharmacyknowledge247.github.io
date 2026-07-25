@@ -6,33 +6,108 @@
 <title>Drug Categories - Pharmacy Knowledge 247</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#0f172a;color:white;}
-header{background:#16a34a;padding:25px;text-align:center;}
-nav{background:#1e293b;padding:12px;text-align:center;}
-nav a{color:white;text-decoration:none;margin:10px;font-weight:bold;}
-.container{max-width:900px;margin:auto;padding:20px;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+background:#16a34a;
+padding:25px;
+text-align:center;
+}
+
+nav{
+background:#1e293b;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+display:inline-block;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.title{
+text-align:center;
+margin-bottom:25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
 .card{
 background:#1e293b;
-padding:18px;
-margin:15px 0;
-border-radius:10px;
+padding:20px;
+border-radius:12px;
+border:1px solid #334155;
+transition:.3s;
 }
-.card h2{color:#22c55e;margin-bottom:8px;}
+
+.card:hover{
+background:#334155;
+transform:translateY(-5px);
+}
+
+.card h2{
+color:#22c55e;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.card p{
+color:#cbd5e1;
+line-height:1.6;
+}
+
 footer{
-background:#1e293b;
+background:#111827;
 text-align:center;
+padding:20px;
+margin-top:40px;
+color:#cbd5e1;
+}
+
+@media(max-width:600px){
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+.container{
 padding:15px;
-margin-top:30px;
+}
+
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>Drug Categories</h1>
-<p>Learn Drug Classification in Easy Hindi</p>
+<h1>Pharmacy Knowledge 247</h1>
+<p>Learn Drug Categories in Easy Hindi</p>
 </header>
 
 <nav>
@@ -44,6 +119,10 @@ margin-top:30px;
 </nav>
 
 <div class="container">
+
+<h2 class="title">Drug Categories</h2>
+
+<div class="grid">
 
 <div class="card">
 <h2>💊 Analgesics</h2>
@@ -62,7 +141,7 @@ margin-top:30px;
 
 <div class="card">
 <h2>🌿 Antihistamines</h2>
-<p>Medicines used to treat allergies.</p>
+<p>Medicines used to treat allergic conditions.</p>
 </div>
 
 <div class="card">
@@ -72,13 +151,30 @@ margin-top:30px;
 
 <div class="card">
 <h2>🩸 Antidiabetics</h2>
-<p>Medicines used to control blood sugar.</p>
+<p>Medicines used to control blood sugar levels.</p>
+</div>
+
+<div class="card">
+<h2>🧪 Antifungals</h2>
+<p>Medicines used to treat fungal infections.</p>
+</div>
+
+<div class="card">
+<h2>🦠 Antivirals</h2>
+<p>Medicines used to treat viral infections.</p>
+</div>
+
+<div class="card">
+<h2>💉 Vaccines</h2>
+<p>Medicines used to prevent infectious diseases.</p>
+</div>
+
 </div>
 
 </div>
 
 <footer>
-© 2026 Pharmacy Knowledge 247
+© 2026 Pharmacy Knowledge 247. All Rights Reserved.
 </footer>
 
 </body>
